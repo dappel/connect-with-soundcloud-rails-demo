@@ -9,12 +9,6 @@ class WelcomeController < ApplicationController
 
   def update
     res = current_user.soundcloud_client.put("/me", :user => {:description => params[:description]})
-    p res
     redirect_to :action => :show
-    
-  rescue Exception => e
-    
-    p e
-    p e.response
   end
 end

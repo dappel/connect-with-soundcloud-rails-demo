@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(:version => 20110217210150) do
     t.string   "soundcloud_username"
     t.string   "soundcloud_access_token"
     t.string   "soundcloud_refresh_token"
-    t.date     "soundcloud_expires_at"
+    t.datetime "soundcloud_expires_at"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
