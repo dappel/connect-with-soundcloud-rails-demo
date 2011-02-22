@@ -1,8 +1,13 @@
 class User < ActiveRecord::Base
-  # for app localhost:3001@live
-  SOUNDCLOUD_CLIENT_ID     = "BXnNn9AjpkQVs8SMnri8g"
-  SOUNDCLOUD_CLIENT_SECRET = "FlhLpivGUdRZMszLxlQ3w1Xl70hSMvH39ILze9748"
-  
+  # Please don't use these keys.
+  # You can register your own app: http://soundcloud.com/you/apps
+  # http://soundcloud.com/you/apps/localhost-3001/edit
+  #SOUNDCLOUD_CLIENT_ID     = "BXnNn9AjpkQVs8SMnri8g"
+  #SOUNDCLOUD_CLIENT_SECRET = "FlhLpivGUdRZMszLxlQ3w1Xl70hSMvH39ILze9748"
+  # http://soundcloud.com/you/apps/connect-with-soundcloud-rails-demo
+  SOUNDCLOUD_CLIENT_ID     = "vkTWPNTmafS9UEsfOmeqQ"
+  SOUNDCLOUD_CLIENT_SECRET = "2oXHSyfwAozLkuXsMmGnQFK7pGqwEJitSAL6PIng"
+
   def self.soundcloud_client(options={})
     options = {
       :client_id     => SOUNDCLOUD_CLIENT_ID,
